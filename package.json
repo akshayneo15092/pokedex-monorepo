@@ -1,0 +1,21 @@
+{
+  "name": "pokedex-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+
+  "scripts": {
+    "dev": "yarn workspace @pockeman/web dev",
+    "build": "turbo run build",
+    "test": "yarn workspace @pockeman/ui run test",
+    "storybook": "yarn workspace @pockeman/ui storybook"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.16"
+  }
+}

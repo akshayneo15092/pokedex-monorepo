@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1781000172714" clover="3.2.0">
+  <project timestamp="1781000172714" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="1" coveredconditionals="1" methods="7" coveredmethods="7" elements="22" coveredelements="22" complexity="0" loc="14" ncloc="14" packages="1" files="7" classes="7"/>
+    <file name="CustomButton.tsx" path="C:\pokedex-monorepo\packages\ui\src\stories\CustomButton.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="15" count="4" type="stmt"/>
+    </file>
+    <file name="EmptyState.tsx" path="C:\pokedex-monorepo\packages\ui\src\stories\EmptyState.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+    </file>
+    <file name="ErrorState.tsx" path="C:\pokedex-monorepo\packages\ui\src\stories\ErrorState.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="14" count="4" type="stmt"/>
+    </file>
+    <file name="Loader.tsx" path="C:\pokedex-monorepo\packages\ui\src\stories\Loader.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="9" count="2" type="stmt"/>
+    </file>
+    <file name="PageHeader.tsx" path="C:\pokedex-monorepo\packages\ui\src\stories\PageHeader.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="16" count="3" type="stmt"/>
+    </file>
+    <file name="PokemonCard.tsx" path="C:\pokedex-monorepo\packages\ui\src\stories\PokemonCard.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="24" count="4" type="stmt"/>
+    </file>
+    <file name="StatBar.tsx" path="C:\pokedex-monorepo\packages\ui\src\stories\StatBar.tsx">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="17" count="4" type="stmt"/>
+    </file>
+  </project>
+</coverage>
