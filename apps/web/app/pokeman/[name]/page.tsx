@@ -1,14 +1,17 @@
 'use client';
-import { use } from 'react';
+
 import { Container, Button, Typography, Box } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import { usePokemonDetail } from '@pockeman/hooks';
 import { PokemonCard, Loader, ErrorState } from '@pockeman/ui';
 
-export default function PokemonDetailPage({ params }: { params: Promise<{ name: string }> }) {
-  const { name } = use(params);
+export default function PokemonDetailPage() {
   const router = useRouter();
+  const params = useParams();
+
+  const name = params.name as string;
+
   const { pokemon, loading, error } = usePokemonDetail(name);
 
   return (
@@ -24,7 +27,10 @@ export default function PokemonDetailPage({ params }: { params: Promise<{ name: 
       {loading && <Loader />}
 
       {error && (
-        <ErrorState message={error} onRetry={() => router.refresh()} />
+        <ErrorState
+          message={error}
+          onRetry={() => router.refresh()}
+        />
       )}
 
       {!loading && !error && pokemon && (
@@ -32,10 +38,11 @@ export default function PokemonDetailPage({ params }: { params: Promise<{ name: 
           <Typography
             variant="caption"
             color="text.secondary"
-            sx={{ textTransform: "capitalize" }}
+            sx={{ textTransform: 'capitalize' }}
           >
             Pokémon / {name}
           </Typography>
+
           <PokemonCard pokemon={pokemon} />
         </Box>
       )}

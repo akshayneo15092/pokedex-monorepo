@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "test": "jest",
     "test:jest": "jest",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",

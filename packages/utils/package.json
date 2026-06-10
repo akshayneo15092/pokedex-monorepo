@@ -5,6 +5,9 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "license": "MIT",
    "dependencies": {
     "@pockeman/types": "*"

@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { StatBar } from "../src/stories/StatBar";
+import { StatBar } from "../src/stories/statBar/StatBar";
 
 describe("StatBar", () => {
   it("renders the label", () => {
@@ -18,8 +18,19 @@ describe("StatBar", () => {
     expect(screen.getByRole("progressbar")).toBeInTheDocument();
   });
 
-  it("sets the correct aria value on the progress bar", () => {
+  it("sets the correct aria value on the progress bar for high values (>=80)", () => {
     render(<StatBar label="Attack" value={80} />);
     expect(screen.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "80");
   });
+
+  it("sets the correct aria value on the progress bar for medium values (50-79)", () => {
+    render(<StatBar label="Defense" value={60} />);
+    expect(screen.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "60");
+  });
+
+  it("sets the correct aria value on the progress bar for low values (<50)", () => {
+    render(<StatBar label="Speed" value={30} />);
+    expect(screen.getByRole("progressbar")).toHaveAttribute("aria-valuenow", "30");
+  });
 });
+

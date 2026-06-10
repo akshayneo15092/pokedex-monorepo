@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "yarn workspace @pockeman/web dev",
     "build": "turbo run build",
-    "test": "yarn workspace @pockeman/ui run test",
+    "test": "turbo run test",
     "storybook": "yarn workspace @pockeman/ui storybook"
   },
   "devDependencies": {

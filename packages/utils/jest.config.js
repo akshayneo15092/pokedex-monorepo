@@ -1,8 +1,7 @@
 module.exports = {
   testEnvironment: "node",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   transform: {
-    "^.+\\.(ts|js)$": "babel-jest",
+    "^.+\\.(ts|tsx|js|jsx)$": ["babel-jest", { configFile: "./babel.config.test.js" }],
   },
   testMatch: ["**/__tests__/**/*.test.ts"],
 };

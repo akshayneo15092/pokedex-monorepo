@@ -1,6 +1,6 @@
-import React from "react";
+
 import { render, screen } from "@testing-library/react";
-import { EmptyState } from "../src/stories/EmptyState";
+import { EmptyState } from "../src/stories/emptyStates/EmptyState";
 
 describe("EmptyState", () => {
   it("renders the heading text", () => {

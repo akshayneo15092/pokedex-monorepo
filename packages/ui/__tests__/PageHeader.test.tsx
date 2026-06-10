@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { PageHeader } from "../src/stories/PageHeader";
+import { PageHeader } from "../src/stories/headers/PageHeader";
 
 describe("PageHeader", () => {
   it("renders the title", () => {

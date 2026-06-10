@@ -2,7 +2,7 @@ module.exports = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   transform: {
-    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest",
+    "^.+\\.(ts|tsx|js|jsx)$": ["babel-jest", { configFile: "./babel.config.test.js" }],
   },
   moduleNameMapper: {
     "^@mui/icons-material/(.*)$": "<rootDir>/__mocks__/muiIconMock.js",

@@ -1,6 +1,7 @@
+import "@testing-library/jest-dom";
 import { render, screen  } from "@testing-library/react";
 import { fireEvent } from "@testing-library/dom";
-import { CustomButton } from "../src/stories/CustomButton";
+import { CustomButton } from "../src/stories/buttons/CustomButton";
 
 describe("CustomButton", () => {
   it("renders the label", () => {

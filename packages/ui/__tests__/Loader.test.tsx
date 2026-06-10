@@ -1,6 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { Loader } from "../src/stories/Loader";
+import { Loader } from "../src/stories/loaders/Loader";
 
 describe("Loader", () => {
   it("renders loading text", () => {

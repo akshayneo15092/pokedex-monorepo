@@ -2,7 +2,7 @@ module.exports = {
   testEnvironment: "jsdom",
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   transform: {
-    "^.+\\.(ts|tsx|js|jsx)$": "babel-jest",
+    "^.+\\.(ts|tsx|js|jsx)$": ["babel-jest", { configFile: "./babel.config.test.js" }],
   },
   moduleNameMapper: {
     "^@mui/icons-material/(.*)$": "<rootDir>/__mocks__/muiIconMock.js",
@@ -13,6 +13,9 @@ module.exports = {
     "\\.(css|svg|png)$": "<rootDir>/__mocks__/fileMock.js",
     "^next/navigation$": "<rootDir>/__mocks__/next-navigation.js",
     "^next/font/(.*)$": "<rootDir>/__mocks__/next-font.js",
+    "^react$": "<rootDir>/node_modules/react",
+    "^react-dom$": "<rootDir>/node_modules/react-dom",
+    "^react-dom/(.*)$": "<rootDir>/node_modules/react-dom/$1",
   },
   testMatch: ["**/__tests__/**/*.test.tsx", "**/__tests__/**/*.test.ts"],
 };

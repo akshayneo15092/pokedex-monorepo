@@ -154,7 +154,7 @@ export const PokemonCard = ({ pokemon }: PokemonCardProps) => {
               Sprites
             </Typography>
             <Stack direction="row" spacing={1} style={{ alignItems:"center"}}>
-              {pokemon.sprites.front_default && (
+              {pokemon.sprites?.front_default && (
                 <Box
                   component="img"
                   src={pokemon.sprites.front_default}

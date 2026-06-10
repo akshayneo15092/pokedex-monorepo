@@ -34,7 +34,7 @@ export const PokemonListCard = ({ pokemon }: PokemonListCardProps) => (
         {pokemon.name}
       </Typography>
       {pokemon.types && (
-        <Stack direction="row" spacing={0.5} flexWrap="wrap">
+        <Stack direction="row" spacing={0.5} sx={{flexWrap:"wrap"}} >
           {pokemon.types.map((t) => <TypeBadge key={t} type={t} />)}
         </Stack>
       )}

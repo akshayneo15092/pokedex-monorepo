@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { fireEvent } from "@testing-library/dom";
-import { ErrorState } from "../src/stories/ErrorState";
+import { ErrorState } from "../src/stories/errorState/ErrorState";
 
 describe("ErrorState", () => {
   it("renders the error message", () => {
