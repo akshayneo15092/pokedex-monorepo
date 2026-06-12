@@ -136,6 +136,25 @@ Storybook runs on port **6006** by default.
 
 ---
 
+## 🤖 CI/CD Pipeline
+
+The project includes a GitHub Actions configuration for Continuous Integration (CI), located at `.github/workflows/ci.yml`.
+
+The pipeline runs automatically on:
+- All pushes to the `main` or `master` branches.
+- All Pull Requests targeting `main` or `master`.
+
+### Pipeline Steps:
+1. **Repository Checkout**: Clones the repository codebase.
+2. **Node.js Setup**: Prepares Node.js v20 and configures global caching for Yarn.
+3. **Dependency Installation**: Runs `yarn install --frozen-lockfile` to ensure exact dependency version alignment.
+4. **Turborepo Caching**: Restores and updates caching for Turborepo tasks to optimize build times.
+5. **Code Linting**: Verifies code styling and standard rules.
+6. **Testing**: Runs the test suite via Turborepo across all workspaces.
+7. **Building**: Performs Next.js and workspace builds to verify compilability.
+
+---
+
 ## 💡 Technical Decisions
 
 ### Monorepo Architecture

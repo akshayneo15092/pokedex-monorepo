@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Setup Turborepo cache
+        uses: dtinth/setup-github-actions-caching-for-turbo@v1
+
+      - name: Lint code
+        run: yarn workspace @pokeman/web lint
+
+      - name: Run tests
+        run: npx turbo run test
+
+      - name: Build applications
+        run: npx turbo run build
