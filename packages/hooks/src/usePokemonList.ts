@@ -4,18 +4,28 @@ import type { PokemonListItem } from '@pokeman/types';
 
 const PAGE_SIZE = 20;
 
-export function usePokemonList() {
+export function usePokemonList(search = '') {
   const [items, setItems] = useState<PokemonListItem[]>([]);
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [hasMore, setHasMore] = useState(true);
 
-  const load = useCallback(async (currentOffset: number) => {
+  // Debounce the search term to avoid hitting the API on every keystroke
+  const [debouncedSearch, setDebouncedSearch] = useState(search);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearch(search);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [search]);
+
+  const load = useCallback(async (currentOffset: number, searchParam?: string) => {
     setLoading(true);
     setError(null);
     try {
-      const data = await fetchPokemonList(PAGE_SIZE, currentOffset);
+      const data = await fetchPokemonList(PAGE_SIZE, currentOffset, searchParam);
       setItems((prev) => (currentOffset === 0 ? data : [...prev, ...data]));
       setHasMore(data.length === PAGE_SIZE);
     } catch {
@@ -26,16 +36,17 @@ export function usePokemonList() {
   }, []);
 
   useEffect(() => {
-    load(0);
-  }, [load]);
+    setOffset(0);
+    load(0, debouncedSearch);
+  }, [debouncedSearch, load]);
 
   const loadMore = useCallback(() => {
     if (!loading && hasMore) {
       const next = offset + PAGE_SIZE;
       setOffset(next);
-      load(next);
+      load(next, debouncedSearch);
     }
-  }, [loading, hasMore, offset, load]);
+  }, [loading, hasMore, offset, load, debouncedSearch]);
 
   return { items, loading, error, hasMore, loadMore };
 }

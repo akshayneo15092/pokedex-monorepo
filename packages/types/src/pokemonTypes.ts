@@ -49,6 +49,6 @@ export interface Pokemon {
 export interface PokemonListItem {
   id: number;
   name: string;
-  imageUrl: string;
+  imageUrl?: string;
   types?: string[];
 }

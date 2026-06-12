@@ -1,23 +1,20 @@
-import { useEffect, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { PokemonListCard } from "./PokemonListCard";
-import { fetchPokemon } from "@pokeman/utils";
 
 interface StoryArgs {
-  pokemonId: number;
+  id: number;
+  name: string;
+  imageUrl: string;
+  types?: string[];
 }
-const meta: Meta = {
-  title: "UI/PokemonListCard",
-  component: PokemonListCard,
 
+const meta: Meta<StoryArgs> = {
+  title: "UI/PokemonListCard",
   argTypes: {
-    pokemonId: {
-      control: {
-        type: "number",
-      },
-      description: "Pokemon ID",
-      defaultValue: 1,
-    },
+    id: { control: "number" },
+    name: { control: "text" },
+    imageUrl: { control: "text" },
+    types: { control: "object" },
   },
 };
 
@@ -25,42 +22,21 @@ export default meta;
 
 type Story = StoryObj<StoryArgs>;
 
-interface Props {
-  pokemonId: number;
-}
-
-const PokemonLoader = ({ pokemonId }: Props) => {
-  const [pokemon, setPokemon] = useState<any>(null);
-
-  useEffect(() => {
-    const loadPokemon = async () => {
-      const data = await fetchPokemon(pokemonId);
-
-      setPokemon({
-        id: data.id,
-        name: data.name,
-        imageUrl:
-          data.sprites.other?.["official-artwork"]?.front_default ??
-          data.sprites.front_default ??
-          "",
-        types: data.types.map((t) => t.type.name),
-      });
-    };
-
-    loadPokemon();
-  }, [pokemonId]);
-
-  if (!pokemon) {
-    return <div>Loading...</div>;
-  }
-
-  return <PokemonListCard pokemon={pokemon} />;
-};
-
 export const Playground: Story = {
   args: {
-    pokemonId: 25,
+    id: 25,
+    name: "pikachu",
+    imageUrl: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+    types: ["electric"],
   },
 
-  render: (args) => <PokemonLoader pokemonId={args.pokemonId} />,
+  render: (args) => {
+    const pokemon = {
+      id: args.id,
+      name: args.name,
+      imageUrl: args.imageUrl,
+      types: args.types,
+    };
+    return <PokemonListCard pokemon={pokemon} />;
+  },
 };

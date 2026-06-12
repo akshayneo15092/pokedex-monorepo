@@ -9,11 +9,17 @@
     "apps/*",
     "packages/*"
   ],
-
- "scripts": {
+  "resolutions": {
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "scripts": {
     "dev": "yarn workspace @pokeman/web dev",
     "build": "yarn workspace @pokeman/web build",
     "test": "yarn workspace @pokeman/web test",
     "storybook": "yarn workspace @pokeman/ui storybook"
-  }  
+  },
+  "devDependencies": {
+    "eslint-config-next": "^16.2.9"
+  }
 }

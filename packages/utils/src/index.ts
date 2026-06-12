@@ -18,8 +18,8 @@ export function mapListItemsToPokemon(results: NamedResource[]): PokemonListItem
   });
 }
 
-export async function fetchPokemonList(limit = 20, offset = 0): Promise<PokemonListItem[]> {
-  const res = await fetch(`${BASE_URL}/pokemon?limit=${limit}&offset=${offset}`);
+export async function fetchPokemonList(limit = 20, offset = 0, searchParam = ""): Promise<PokemonListItem[]> {
+  const res = await fetch(`${BASE_URL}/pokemon?limit=${limit}&offset=${offset}${searchParam ? `&search=${searchParam}` : ''}`);
   if (!res.ok) throw new Error('Failed to fetch pokemon list');
   const data: PokemonListResponse = await res.json();
   return mapListItemsToPokemon(data.results);

@@ -8,8 +8,8 @@ import type { PokemonListItem } from '@pokeman/types';
 import { PokemonListCard, Loader, ErrorState, EmptyState, PageHeader } from '@pokeman/ui';
 
 export default function Home() {
-  const { items, loading, error, hasMore, loadMore } = usePokemonList();
   const [search, setSearch] = useState('');
+  const { items, loading, error, hasMore, loadMore } = usePokemonList(search);
   const router = useRouter();
 
   const filtered = useMemo<PokemonListItem[]>(

@@ -3,7 +3,7 @@ import type { ChipProps } from '@mui/material';
 
 const TYPE_COLORS: Record<string, string> = {
   fire: '#F08030',
-  water: '#6890F0',
+  water: '#000000',
   grass: '#78C850',
   electric: '#F8D030',
   ice: '#98D8D8',
