@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { PokemonListCard } from "./PokemonListCard";
-import { fetchPokemon } from "@pockeman/utils";
+import { fetchPokemon } from "@pokeman/utils";
 
 interface StoryArgs {
   pokemonId: number;

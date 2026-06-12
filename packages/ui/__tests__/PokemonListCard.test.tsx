@@ -1,7 +1,7 @@
-import React from "react";
+import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { PokemonListCard } from "../src/stories/card/PokemonListCard";
-import type { PokemonListItem } from "@pockeman/types";
+import type { PokemonListItem } from "@pokeman/types";
 
 const mockPokemon: PokemonListItem = {
   id: 1,

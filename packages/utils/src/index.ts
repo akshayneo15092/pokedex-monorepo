@@ -1,4 +1,4 @@
-import type { Pokemon, PokemonListResponse, PokemonListItem, NamedResource } from '@pockeman/types';
+import type { Pokemon, PokemonListResponse, PokemonListItem, NamedResource } from '@pokeman/types';
 
 const BASE_URL = 'https://pokeapi.co/api/v2';
 

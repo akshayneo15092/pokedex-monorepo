@@ -1,6 +1,6 @@
 "use client";
 import { Card, CardMedia, CardContent, Typography, Stack } from "@mui/material";
-import type { PokemonListItem } from "@pockeman/types";
+import type { PokemonListItem } from "@pokeman/types";
 import { TypeBadge } from "../typeBadge/TypeBadge";
 
 interface PokemonListCardProps {

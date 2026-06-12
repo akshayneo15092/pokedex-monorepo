@@ -1,5 +1,5 @@
 {
-  "name": "@pockeman/ui",
+  "name": "@pokeman/ui",
   "private": true,
   "version": "0.0.0",
   "main": "src/stories/index.ts",
@@ -20,7 +20,7 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^9.1.0",
     "@mui/material": "^9.1.0",
-    "@pockeman/types": "*",
+    "@pokeman/types": "*",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },

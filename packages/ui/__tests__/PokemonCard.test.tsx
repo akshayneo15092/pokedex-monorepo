@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { PokemonCard } from "../src/stories/card/PokemonCard";
-import type { Pokemon } from "@pockeman/types";
+import type { Pokemon } from "@pokeman/types";
 
 const mockPokemon: Pokemon = {
   id: 1,

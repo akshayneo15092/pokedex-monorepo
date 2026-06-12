@@ -10,8 +10,8 @@ import {
   Chip,
   Divider,
 } from "@mui/material";
-import type { Pokemon } from "@pockeman/types";
-import { formatStatName, formatHeight, formatWeight, getOfficialArtworkUrl } from "@pockeman/utils";
+import type { Pokemon } from "@pokeman/types";
+import { formatStatName, formatHeight, formatWeight, getOfficialArtworkUrl } from "@pokeman/utils";
 import { TypeBadge } from "../typeBadge/TypeBadge";
 import { StatBar } from "../statBar/StatBar";
 

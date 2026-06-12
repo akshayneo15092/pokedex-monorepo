@@ -3,9 +3,9 @@ import React, { useState, useMemo } from 'react';
 import { Container, Grid, TextField, Box, Button, Typography, InputAdornment } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/navigation';
-import { usePokemonList } from '@pockeman/hooks';
-import type { PokemonListItem } from '@pockeman/types';
-import { PokemonListCard, Loader, ErrorState, EmptyState, PageHeader } from '@pockeman/ui';
+import { usePokemonList } from '@pokeman/hooks';
+import type { PokemonListItem } from '@pokeman/types';
+import { PokemonListCard, Loader, ErrorState, EmptyState, PageHeader } from '@pokeman/ui';
 
 export default function Home() {
   const { items, loading, error, hasMore, loadMore } = usePokemonList();

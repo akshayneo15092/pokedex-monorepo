@@ -9,11 +9,11 @@
     "packages/*"
   ],
 
-  "scripts": {
-    "dev": "yarn workspace @pockeman/web dev",
-    "build": "turbo run build",
-    "test": "turbo run test",
-    "storybook": "yarn workspace @pockeman/ui storybook"
+ "scripts": {
+    "dev": "yarn workspace @pokeman/web dev",
+    "build": "yarn workspace @pokeman/web build",
+    "test": "yarn workspace @pokeman/web test",
+    "storybook": "yarn workspace @pokeman/ui storybook"
   },
   "devDependencies": {
     "turbo": "^2.9.16"

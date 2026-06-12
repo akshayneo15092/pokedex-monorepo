@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { fetchPokemonList } from '@pockeman/utils';
-import type { PokemonListItem } from '@pockeman/types';
+import { fetchPokemonList } from '@pokeman/utils';
+import type { PokemonListItem } from '@pokeman/types';
 
 const PAGE_SIZE = 20;
 

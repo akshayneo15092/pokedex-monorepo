@@ -3,8 +3,8 @@
 import { Container, Button, Typography, Box } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useRouter, useParams } from 'next/navigation';
-import { usePokemonDetail } from '@pockeman/hooks';
-import { PokemonCard, Loader, ErrorState } from '@pockeman/ui';
+import { usePokemonDetail } from '@pokeman/hooks';
+import { PokemonCard, Loader, ErrorState } from '@pokeman/ui';
 
 export default function PokemonDetailPage() {
   const router = useRouter();

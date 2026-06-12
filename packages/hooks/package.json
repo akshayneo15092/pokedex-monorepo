@@ -1,5 +1,5 @@
 {
-  "name": "@pockeman/hooks",
+  "name": "@pokeman/hooks",
   "version": "1.0.0",
    "main": "src/index.ts",
   "exports": {
@@ -13,7 +13,7 @@
     "react": "^19.0.0"
   },
   "dependencies": {
-    "@pockeman/utils": "*",
-    "@pockeman/types": "*"
+    "@pokeman/utils": "*",
+    "@pokeman/types": "*"
   }
 }

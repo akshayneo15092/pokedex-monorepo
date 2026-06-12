@@ -26,16 +26,16 @@
       "@/*": [
         "./*"
       ],
-      "@pockeman/ui": [
+      "@pokeman/ui": [
         "../packages/ui/src/stories/index.ts"
       ],
-      "@pockeman/utils": [
+      "@pokeman/utils": [
         "../packages/utils/src/index.ts"
       ],
-      "@pockeman/types": [
+      "@pokeman/types": [
         "../packages/types/src/index.ts"
       ],
-      "@pockeman/hooks": [
+      "@pokeman/hooks": [
         "../packages/hooks/src/index.ts"
       ]
     }

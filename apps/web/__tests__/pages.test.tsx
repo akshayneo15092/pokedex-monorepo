@@ -4,7 +4,7 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import Home from "../app/page";
 import PokemonDetailPage from "../app/pokeman/[name]/page";
-import { usePokemonList, usePokemonDetail } from "@pockeman/hooks";
+import { usePokemonList, usePokemonDetail } from "@pokeman/hooks";
 import { mockPush, mockBack } from "../__mocks__/next-navigation";
 
 // Mock window.location at the file level

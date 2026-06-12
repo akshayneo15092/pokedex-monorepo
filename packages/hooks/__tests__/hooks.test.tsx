@@ -1,10 +1,10 @@
 import { renderHook, act } from "@testing-library/react";
 import { usePokemonDetail } from "../src/usePokemonDetail";
 import { usePokemonList } from "../src/usePokemonList";
-import { fetchPokemon, fetchPokemonList } from "@pockeman/utils";
+import { fetchPokemon, fetchPokemonList } from "@pokeman/utils";
 
 // Mock the utils module
-jest.mock("@pockeman/utils", () => ({
+jest.mock("@pokeman/utils", () => ({
   fetchPokemon: jest.fn(),
   fetchPokemonList: jest.fn(),
 }));
